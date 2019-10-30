@@ -4,7 +4,8 @@ PACK_BASE=$(PACK_NAME)/start
 COMPONENTS=\
 	$(PACK_BASE)/CSApprox/plugin/CSApprox.vim\
 	$(PACK_BASE)/ukrainian-enhanced/keymap/ukrainian-enhanced.vim\
-	$(PACK_BASE)/vimwiki/plugin/vimwiki.vim
+	$(PACK_BASE)/vimwiki/plugin/vimwiki.vim\
+	$(PACK_BASE)/localvimrc/plugin/localvimrc.vim
 .PHONY:all clean
 all:$(PACK_NAME).zip
 clean:
@@ -27,3 +28,7 @@ $(PACK_BASE)/ukrainian-enhanced/keymap/ukrainian-enhanced.vim: ukrainian-enhance
 $(PACK_BASE)/vimwiki/plugin/vimwiki.vim: vimwiki/plugin/vimwiki.vim
 	mkdir -p $(PACK_BASE)/vimwiki
 	cp -rl vimwiki/* $(PACK_BASE)/vimwiki/
+# localvimrc 3.0.1 https://github.com/embear/vim-localvimrc.git
+$(PACK_BASE)/localvimrc/plugin/localvimrc.vim: localvimrc/plugin/localvimrc.vim
+	mkdir -p $(PACK_BASE)/localvimrc
+	cp -rl localvimrc/{doc,plugin} $(PACK_BASE)/localvimrc/
