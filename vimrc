@@ -22,6 +22,12 @@ colorscheme koehler
 set number relativenumber laststatus=2
 set tabstop=4 shiftwidth=4 noexpandtab
 
+if &term == 'screen'
+	set title t_ts=_ t_fs=\
+elseif &term == 'tmux' || &term == 'tmux-256color' || &term == 'xterm'
+	set title
+endif
+
 " Keymaps
 command Ru set keymap=russian-jcukenwin
 command Uk set keymap=ukrainian-enhanced
