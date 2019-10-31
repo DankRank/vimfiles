@@ -6,11 +6,13 @@ COMPONENTS=\
 	$(PACK_BASE)/ukrainian-enhanced/keymap/ukrainian-enhanced.vim\
 	$(PACK_BASE)/vimwiki/plugin/vimwiki.vim\
 	$(PACK_BASE)/localvimrc/plugin/localvimrc.vim
-.PHONY:all clean
+.PHONY:all clean xinstall
 all:$(PACK_NAME).zip
 clean:
 	$(RM) $(PACK_NAME).zip
 	$(RM) -r $(PACK_NAME)
+xinstall:
+	cp -rl egor.zip vimrc $(HOME)/dotfiles/
 egor.zip:$(COMPONENTS)
 	$(RM) $(PACK_NAME).zip
 	zip -D9r $(PACK_NAME).zip $(PACK_NAME)
