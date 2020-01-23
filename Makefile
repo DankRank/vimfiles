@@ -5,15 +5,19 @@ COMPONENTS=\
 	$(PACK_BASE)/CSApprox/plugin/CSApprox.vim\
 	$(PACK_BASE)/ukrainian-enhanced/keymap/ukrainian-enhanced.vim\
 	$(PACK_BASE)/vimwiki/plugin/vimwiki.vim\
-	$(PACK_BASE)/localvimrc/plugin/localvimrc.vim
-.PHONY:all clean xinstall
+	$(PACK_BASE)/localvimrc/plugin/localvimrc.vim\
+	$(PACK_BASE)/sensible/plugin/sensible.vim
+.PHONY:all clean xinstall install-pack
 all:$(PACK_NAME).zip
 clean:
 	$(RM) $(PACK_NAME).zip
 	$(RM) -r $(PACK_NAME)
-xinstall:
-	cp -rl egor.zip vimrc $(HOME)/dotfiles/
-egor.zip:$(COMPONENTS)
+xinstall:$(PACK_NAME).zip vimrc
+	cp -rl $(PACK_NAME).zip vimrc $(HOME)/dotfiles/
+install-pack:$(PACK_NAME).zip
+	mkdir -p ~/.vim/pack
+	unzip -o $(PACK_NAME).zip -d ~/.vim/pack
+$(PACK_NAME).zip:$(COMPONENTS)
 	$(RM) $(PACK_NAME).zip
 	zip -D9r $(PACK_NAME).zip $(PACK_NAME)
 
@@ -34,3 +38,7 @@ $(PACK_BASE)/vimwiki/plugin/vimwiki.vim: vimwiki/plugin/vimwiki.vim
 $(PACK_BASE)/localvimrc/plugin/localvimrc.vim: localvimrc/plugin/localvimrc.vim
 	mkdir -p $(PACK_BASE)/localvimrc
 	cp -rl localvimrc/{doc,plugin} $(PACK_BASE)/localvimrc/
+# sensible master https://github.com/tpope/vim-sensible.git
+$(PACK_BASE)/sensible/plugin/sensible.vim: vim-sensible/plugin/sensible.vim
+	mkdir -p $(PACK_BASE)/sensible
+	cp -rl vim-sensible/plugin $(PACK_BASE)/sensible/

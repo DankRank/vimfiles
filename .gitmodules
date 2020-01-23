@@ -4,3 +4,6 @@
 [submodule "localvimrc"]
 	path = localvimrc
 	url = https://github.com/embear/vim-localvimrc.git
+[submodule "vim-sensible"]
+	path = vim-sensible
+	url = https://github.com/tpope/vim-sensible.git

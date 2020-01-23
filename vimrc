@@ -1,18 +1,6 @@
-unlet! skip_default_vim
-source $VIMRUNTIME/defaults.vim
-""""
-" Defaults which I particularly care about
-"
-"set nocompatible
-"syntax on
-"set nobackup
-"set backspace=indent,eol,start
-"set ruler
-"filetype plugin on
-""""
-
 packloadall
-
+runtime! plugin/sensible.vim
+set nobackup
 if has('gui_running')
 	set guifont=Courier_New:h12:cANSI:qDRAFT
 	set encoding=utf-8
