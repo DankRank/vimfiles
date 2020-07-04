@@ -5,7 +5,6 @@ COMPONENTS=\
 	$(PACK_BASE)/CSApprox/plugin/CSApprox.vim\
 	$(PACK_BASE)/ukrainian-enhanced/keymap/ukrainian-enhanced.vim\
 	$(PACK_BASE)/vimwiki/plugin/vimwiki.vim\
-	$(PACK_BASE)/localvimrc/plugin/localvimrc.vim\
 	$(PACK_BASE)/sensible/plugin/sensible.vim\
 	$(PACK_BASE)/fugitive/plugin/fugitive.vim
 .PHONY:all clean xinstall install-pack
@@ -35,10 +34,6 @@ $(PACK_BASE)/ukrainian-enhanced/keymap/ukrainian-enhanced.vim: ukrainian-enhance
 $(PACK_BASE)/vimwiki/plugin/vimwiki.vim: vimwiki/plugin/vimwiki.vim
 	mkdir -p $(PACK_BASE)/vimwiki
 	cp -rl vimwiki/* $(PACK_BASE)/vimwiki/
-# localvimrc 3.0.1 https://github.com/embear/vim-localvimrc.git
-$(PACK_BASE)/localvimrc/plugin/localvimrc.vim: localvimrc/plugin/localvimrc.vim
-	mkdir -p $(PACK_BASE)/localvimrc
-	cp -rl localvimrc/{doc,plugin} $(PACK_BASE)/localvimrc/
 # sensible master https://github.com/tpope/vim-sensible.git
 $(PACK_BASE)/sensible/plugin/sensible.vim: vim-sensible/plugin/sensible.vim
 	mkdir -p $(PACK_BASE)/sensible
