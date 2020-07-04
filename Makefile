@@ -14,7 +14,7 @@ clean:
 	$(RM) $(PACK_NAME).zip
 	$(RM) -r $(PACK_NAME)
 xinstall:$(PACK_NAME).zip vimrc
-	cp -rl $(PACK_NAME).zip vimrc $(HOME)/dotfiles/
+	cp $(PACK_NAME).zip vimrc $(HOME)/dotfiles/
 install-pack:$(PACK_NAME).zip
 	mkdir -p ~/.vim/pack
 	unzip -o $(PACK_NAME).zip -d ~/.vim/pack
