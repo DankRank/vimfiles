@@ -6,7 +6,8 @@ COMPONENTS=\
 	$(PACK_BASE)/ukrainian-enhanced/keymap/ukrainian-enhanced.vim\
 	$(PACK_BASE)/vimwiki/plugin/vimwiki.vim\
 	$(PACK_BASE)/sensible/plugin/sensible.vim\
-	$(PACK_BASE)/fugitive/plugin/fugitive.vim
+	$(PACK_BASE)/fugitive/plugin/fugitive.vim\
+	$(PACK_BASE)/editorconfig/plugin/editorconfig.vim
 .PHONY:all clean xinstall install-pack
 all:$(PACK_NAME).zip
 clean:
@@ -42,3 +43,7 @@ $(PACK_BASE)/sensible/plugin/sensible.vim: vim-sensible/plugin/sensible.vim
 $(PACK_BASE)/fugitive/plugin/fugitive.vim: vim-fugitive/plugin/fugitive.vim
 	mkdir -p $(PACK_BASE)/fugitive
 	cp -rl vim-fugitive/{autoload,doc,ftdetect,plugin,syntax} $(PACK_BASE)/fugitive/
+# editorconfig master https://github.com/editorconfig/editorconfig-vim.git
+$(PACK_BASE)/editorconfig/plugin/editorconfig.vim: editorconfig-vim/plugin/editorconfig.vim
+	mkdir -p $(PACK_BASE)/editorconfig
+	cp -rl editorconfig-vim/{autoload,doc,plugin} $(PACK_BASE)/editorconfig/
