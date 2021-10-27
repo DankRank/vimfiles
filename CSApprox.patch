@@ -1,6 +1,0 @@
-680,681c680,681
-<       echomsg "CSApprox skipped; terminal only has" &t_Co "colors, not 88/256"
-<       echomsg "Try checking :help csapprox-terminal for workarounds"
----
->       "echomsg "CSApprox skipped; terminal only has" &t_Co "colors, not 88/256"
->       "echomsg "Try checking :help csapprox-terminal for workarounds"
