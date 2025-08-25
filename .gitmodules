@@ -25,3 +25,6 @@
 [submodule "vim-rec"]
 	path = start/vim-rec
 	url = https://github.com/zaid/vim-rec.git
+[submodule "vim-ca65"]
+	path = start/vim-ca65/syntax
+	url = https://github.com/zorchenhimer/vim-ca65.git
