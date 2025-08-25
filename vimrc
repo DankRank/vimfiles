@@ -13,3 +13,4 @@ colorscheme koehler
 set number relativenumber modeline title
 set tabstop=4 shiftwidth=0 softtabstop=-1 noexpandtab
 set keymap=ukrainian-enhanced iminsert=0 imsearch=0
+let g:recutils_no_folding=1

@@ -1,9 +1,27 @@
-[submodule "vimwiki"]
-	path = start/vimwiki
-	url = https://github.com/vimwiki/vimwiki.git
 [submodule "vim-sensible"]
 	path = start/vim-sensible
 	url = https://github.com/tpope/vim-sensible.git
 [submodule "vim-fugitive"]
 	path = start/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
+[submodule "vim-eunuch"]
+	path = start/vim-eunuch
+	url = https://github.com/tpope/vim-eunuch.git
+[submodule "vim-vinegar"]
+	path = start/vim-vinegar
+	url = https://github.com/tpope/vim-vinegar.git
+[submodule "vimwiki"]
+	path = start/vimwiki
+	url = https://github.com/vimwiki/vimwiki.git
+[submodule "goyo.vim"]
+	path = start/goyo.vim
+	url = https://github.com/junegunn/goyo.vim
+[submodule "tagbar"]
+	path = start/tagbar
+	url = https://github.com/preservim/tagbar.git
+[submodule "vim-glsl"]
+	path = start/vim-glsl
+	url = https://github.com/tikhomirov/vim-glsl.git
+[submodule "vim-rec"]
+	path = start/vim-rec
+	url = https://github.com/zaid/vim-rec.git
