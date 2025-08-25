@@ -21,9 +21,4 @@ elseif &term == 'tmux' || &term == 'tmux-256color' || &term == 'xterm'
 	set title
 endif
 
-" Keymaps
-command Ru set keymap=russian-jcukenwin
-command Uk set keymap=ukrainian-enhanced
-command En set iminsert=0 imsearch=0
-Uk
-En
+set keymap=ukrainian-enhanced iminsert=0 imsearch=0
