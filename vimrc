@@ -4,7 +4,6 @@ runtime! plugin/sensible.vim
 set nobackup
 if has('gui_running')
 	set guifont=Courier_New:h12:cANSI:qDRAFT
-	set encoding=utf-8
 	set guioptions-=T
 	set mouse=a
 elseif has('mouse')
