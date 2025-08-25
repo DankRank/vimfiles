@@ -1,4 +1,5 @@
 packloadall
+packadd! editorconfig
 runtime! plugin/sensible.vim
 set nobackup
 if has('gui_running')
