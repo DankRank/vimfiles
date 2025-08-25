@@ -3,7 +3,7 @@ packadd! editorconfig
 runtime! plugin/sensible.vim
 set nobackup
 if has('gui_running')
-	set guifont=Courier_New:h12:cANSI:qDRAFT
+	set guifont=Hack\ 12,DejaVu\ Sans\ Mono\ 12,Courier_New:h12:cANSI:qDRAFT
 	set guioptions-=T
 	set mouse=a
 elseif has('mouse')
