@@ -1,8 +1,7 @@
 * text eol=lf
+*.txt text
+*.vim text
 .gitattributes text
 .gitignore text
-Makefile text
+.gitmodules text
 vimrc text
-*.vim text
-*.patch text
-*.zip binary
