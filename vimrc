@@ -14,11 +14,5 @@ endif
 colorscheme koehler
 set number relativenumber laststatus=2
 set tabstop=4 shiftwidth=4 noexpandtab
-
-if &term == 'screen'
-	set title t_ts=_ t_fs=\
-elseif &term == 'tmux' || &term == 'tmux-256color' || &term == 'xterm'
-	set title
-endif
-
+set title
 set keymap=ukrainian-enhanced iminsert=0 imsearch=0
