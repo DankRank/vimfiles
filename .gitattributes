@@ -1,7 +1,0 @@
-* text eol=lf
-*.txt text
-*.vim text
-.gitattributes text
-.gitignore text
-.gitmodules text
-vimrc text
